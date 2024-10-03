@@ -1,24 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        // Création d'un animal (Lion)
+        Zoo zoo1 = new Zoo("Zoo Central", "Paris", 5);
+        Zoo zoo2 = new Zoo("Zoo Tropical", "Marseille", 5);
+
         Animal lion = new Animal("Felidae", "Lion", 5, true);
 
 
-        Animal singe = new Animal("gerd", "grayda", 8, false);
+        Animal singe = new Animal("chedly", "fo", 9, false);
 
-        // Création d'un zoo (myZoo)
-        Zoo myZoo = new Zoo("My Awesome Zoo", "Paris", 10, 25);
+        zoo1.addAnimal(lion);
+zoo2.addAnimal(singe);
 
+        zoo1.displayZooInfo();
+        zoo2.displayZooInfo();
 
+        int index = zoo1.searchAnimal(lion);
+        System.out.println("Tiger trouvé à l'index: " + index);
 
-        // Ajout de l'animal au zoo
-        myZoo.addAnimal(lion, 0);
-
-
-        myZoo.addAnimal(singe, 1);
-
-        // Affichage des informations
-        lion.displayAnimalInfo();
-        myZoo.displayZooInfo();
+        Zoo biggerZoo = Zoo.comparerZoo(zoo1, zoo2);
+        System.out.println("Le zoo avec le plus d'animaux est : " + biggerZoo.name);
     }
 }
