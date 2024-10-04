@@ -24,6 +24,7 @@ public class Animal {
 
     // Getter pour l'âge
     public int getAge() {
+
         return age;
     }
 
@@ -42,7 +43,14 @@ public class Animal {
 
     // Setter pour modifier l'âge si nécessaire (optionnel)
     public void setAge(int age) {
-        this.age = age;
+
+        if (age <0) {
+
+            System.out.println("Erreur: Age invalide");
+        }
+        else {
+            this.age = age;
+        }
     }
 
     // Setter pour modifier la famille (optionnel)

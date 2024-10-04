@@ -1,6 +1,6 @@
 public class Zoo {
     Animal[] animals;
-    String name;
+    private String name;
     String city;
     final int nbrCages; // Instruction 14 : constante pour le nombre maximal de cages
     int animalCount;    // Compteur d'animaux
@@ -12,6 +12,19 @@ public class Zoo {
         this.nbrCages = nbrCages;
         this.animals = new Animal[nbrCages]; // Tableau de taille égale au nombre de cages
         this.animalCount = 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+
+        if (name.isEmpty()) {
+            System.out.println("nom vide ");
+        }
+
+        this.name = name;
     }
 
     // Méthode pour ajouter un animal au zoo

@@ -18,6 +18,6 @@ zoo2.addAnimal(singe);
         System.out.println("Tiger trouvé à l'index: " + index);
 
         Zoo biggerZoo = Zoo.comparerZoo(zoo1, zoo2);
-        System.out.println("Le zoo avec le plus d'animaux est : " + biggerZoo.name);
+        System.out.println("Le zoo avec le plus d'animaux est : " + biggerZoo.getName());
     }
 }
